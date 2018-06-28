@@ -1,0 +1,75 @@
+body{
+    background-color: #f8fbf9;
+}
+header{
+    background-image: url('../images/trains.jpg')
+}
+
+.bg-train{
+    background:url(../images/trains.jpg);
+    height: 400px;
+    background-repeat: no-repeat;
+    background-size:cover;
+    position: relative;
+    
+}
+#clock{
+    position: absolute;
+    top: 340px;
+    right: 10px;
+    /* border: 1px solid white; */
+    background-color: black;
+    padding: 8px;
+    font-size: 1.1em;
+    border-radius: 6px;
+    font-family: "Open Sans", 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+   
+}
+
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+    
+}
+
+
+td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+    font-size: 1.2em;
+    font-family: "Open Sans", 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+}
+
+th{
+    font-size: 1.4em;
+    background-color: #4E4E4E;
+    color: white;
+    font-family: Comfortaa, 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+tr:nth-child(even) {
+    background-color: #dddddd;
+}
+
+.input-group-addon{
+    width: 35px;
+}
+
+.col-form-label{
+    font-size: 1.4em;
+}
+
+
+#trainForm{
+    font-family: Roboto,'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+   
+}
+/* @media only screen and (max-width: 640px) {
+    body {
+        background-color: lightblue;
+    }
+      
+} */

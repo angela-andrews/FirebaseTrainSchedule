@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+
+    <title>Kings Cross Station</title>
+
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <!-- Custom fonts for this template -->
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+    <link href="https://fonts.googleapis.com/css?family=Comfortaa|Roboto:300,400" rel="stylesheet">
+    <link href="assets/css/bootstrap4-wizardry.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="assets/css/styles.css" rel="stylesheet">
+
+  </head>
+
+  <body>
+    
+  
+<div class="jumbotron bg-train bg-dark text-white mb-0 radius-0">
+  <div class="container">
+
+      <h1 class="display-1 text-light header-text">Kings Cross Schedule</h1>
+
+      <div id="clock">Current Date &amp; Time: <span id="currentTime"> </span></div>
+     
+
+  
+
+  </div>
+</div>
+<div class="container py-5">
+  <!-- trains go here -->
+
+<table id="mainSchedule">
+  <thead>
+    <tr id="scheduleHeadings">
+      <th>Train Name</th>
+      <th>Destination</th>
+      <th>Frequency (min)</th>
+      <th>Next Train Arrives</th>
+      <th>Minutes Away</th>
+    </tr>
+  </thead>
+  <tbody>
+ <!-- Dynamically add table tr and td -->
+  </tbody>
+
+</table>
+
+
+  </div>
+
+
+<hr>
+  <div class="container py-5">
+   
+   <form id="trainForm">
+     <div class="form-group row">
+       <label for="trainName" class="col-4 col-form-label">Train Name</label> 
+       <div class="col-8">
+         <div class="input-group">
+           <div class="input-group-addon">
+             <i class="fa fa-train"></i>
+           </div> 
+           <input id="trainName" name="trainName" placeholder="Train Name" type="text" required="required" class="form-control here">
+         </div>
+       </div>
+     </div>
+     <div class="form-group row">
+       <label for="destination" class="col-4 col-form-label">Destination</label> 
+       <div class="col-8">
+         <div class="input-group">
+           <div class="input-group-addon">
+             <i class="fa fa-map-marker"></i>
+           </div> 
+           <input id="destination" name="destination" placeholder="Destination" type="text" required="required" class="form-control here">
+         </div>
+       </div>
+     </div>
+     <div class="form-group row">
+       <label for="firstTrain" class="col-4 col-form-label">First Train Time -- in military time (24HR Clock)
+      </label> 
+       <div class="col-8">
+         <div class="input-group">
+           <div class="input-group-addon">
+             <i class="fa fa-clock-o"></i>
+           </div> 
+           <input id="firstTrain" name="firstTrain" placeholder="HH:mm" type="text" required="required" class="form-control here">
+         </div>
+       </div>
+     </div>
+     <div class="form-group row">
+       <label for="frequency" class="col-4 col-form-label">Train Frequency- in minutes</label> 
+       <div class="col-8">
+         <div class="input-group">
+           <div class="input-group-addon">
+             <i class="fa fa-calendar"></i>
+           </div> 
+           <input id="frequency" name="frequency" placeholder="#" type="text" required="required" class="form-control here">
+         </div>
+       </div>
+     </div> 
+     <div class="form-group row">
+       <div class="offset-4 col-8">
+         <button id="submit" name="submit" type="submit" class="btn btn-success" >Submit</button>
+       </div>
+     </div>
+   </form>
+   
+    
+   
+  </div>
+
+   
+
+  
+
+    <!-- Firebase, jQuery, Bootstrap, My JavaScript -->
+
+    <script src="https://www.gstatic.com/firebasejs/5.1.0/firebase.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+ 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
+    <!-- Custom scripts for this template -->
+    <script src="assets/js/app.js"></script>
+
+  </body>
+
+</html>
