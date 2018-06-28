@@ -1,6 +1,6 @@
  // Initialize Firebase
  var config = {
-    apiKey: "YOUR_KEY_HERE",
+    apiKey: process.env.FIREBASE_API_KEY,
     authDomain: "formdata-e4174.firebaseapp.com",
     databaseURL: "https://formdata-e4174.firebaseio.com",
     projectId: "formdata-e4174",
@@ -128,7 +128,7 @@ var  displayTime = function() {
     var location= "39.946343,-75.162644"; //my current location
     var targetDate= new Date(); // current date/time of pc
     var timestamp = targetDate.getTime()/1000 + targetDate.getTimezoneOffset() * 60;//current UTC date/time in seconds since midnight 1/1/1970
-    var apikey = "YOUR_KEY_HERE"; //my key
+    var apikey = process.env.GOOGLE_API_KEY; //my key
     var queryURL = "https://maps.googleapis.com/maps/api/timezone/json?location=" + location + '&timestamp=' + timestamp + '&key=' + apikey
 
     // Creating an AJAX call for the current time
