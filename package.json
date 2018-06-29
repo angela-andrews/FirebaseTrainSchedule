@@ -1,0 +1,31 @@
+{
+  "name": "firebasetrainschedule",
+  "version": "1.0.0",
+  "description": "Firebase Train Schedule Creator",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/angela-andrews/FirebaseTrainSchedule.git"
+  },
+  "keywords": [
+    "UPENN",
+    "bootcamp",
+    "firebase",
+    "jquery",
+    "javascript"
+  ],
+  "author": "Angela Andrews",
+  "bugs": {
+    "url": "https://github.com/angela-andrews/FirebaseTrainSchedule/issues"
+  },
+  "homepage": "https://github.com/angela-andrews/FirebaseTrainSchedule#readme",
+  "dependencies": {
+    "express": "^4.16.3"
+  },
+  "engines": {
+    "node" : "10.4.1"
+  }
+}

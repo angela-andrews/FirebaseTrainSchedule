@@ -51,14 +51,9 @@ database.ref().push(trainInfo);
 // $("#firstTrain").empty();
 // $("#frequency").empty();
 
-
-
- 
-
 clearForm()
 
 });
-
 
 function clearForm() {
     document.getElementById("trainForm").reset();
@@ -117,51 +112,9 @@ database.ref().on("child_added", function(childSnapshot) {
     
   });
   
+  function displayTime () {
+    var currentTime = moment().format('MMM Do YYYY, h:mm:ss a');
+    $("#currentTime").text(currentTime);
 
-
-
-//Google time
-var currentDateTime= "";
-var t = "";
-var  displayTime = function() {
-    //http://www.javascriptkit.com/dhtmltutors/local-time-google-time-zone-api.shtml
-    var location= "39.946343,-75.162644"; //my current location
-    var targetDate= new Date(); // current date/time of pc
-    var timestamp = targetDate.getTime()/1000 + targetDate.getTimezoneOffset() * 60;//current UTC date/time in seconds since midnight 1/1/1970
-    var apikey = "YOUR_KEY_HERE"; //my key
-    var queryURL = "https://maps.googleapis.com/maps/api/timezone/json?location=" + location + '&timestamp=' + timestamp + '&key=' + apikey
-
-    // Creating an AJAX call for the current time
-    $.ajax({
-        url: queryURL,
-        method: "GET"
-      }).then(function(response) {
-        console.log(response);
-        
-        var offsets = response.dstOffset * 1000 + response.rawOffset * 1000 // get DST and time zone offsets in milliseconds
-            var localdate = new Date(timestamp * 1000 + offsets) // Date object containing current time of Tokyo (timestamp + dstOffset + rawOffset)
-            currentDateTime= (localdate.toLocaleString());
-            console.log(localdate.toLocaleString()) // Display current Philadelphia date and time
-            $("#currentTime").text(currentDateTime);
-           
-            return currentDateTime;
-      });
-      
-};
-
-displayTime();
-
-//setInterval(displayTime, 1000);
-
-//$("#currentTime").text(setInterval(displayTime, 1000));
-//$("#currentTime").text(t);
-
-
-/*
-
-
-https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=40.045122,75.059438&radius=15&types=food&key=AIzaSyD6i_Q0LsVxNcq45QqH_Vb-yJMyksGGPk0
-
-https://maps.googleapis.com/maps/api/place/findplacefromtext/json?input=Museum%20of%20Contemporary%20Art%20Australia&inputtype=textquery&fields=photos,formatted_address,name,rating,opening_hours,geometry&key=AIzaSyD6i_Q0LsVxNcq45QqH_Vb-yJMyksGGPk0 
-
-*/
+  }
+  setInterval(displayTime, 1000);
