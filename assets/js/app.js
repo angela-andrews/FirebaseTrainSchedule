@@ -1,12 +1,12 @@
  // Initialize Firebase
  var config = {
-    apiKey: "YOUR_KEY_HERE",
-    authDomain: "formdata-e4174.firebaseapp.com",
-    databaseURL: "https://formdata-e4174.firebaseio.com",
-    projectId: "formdata-e4174",
-    storageBucket: "formdata-e4174.appspot.com",
-    messagingSenderId: "665972625346"
-  };
+  apiKey: "AIzaSyClEsPXC-Lh2U_UtBf2l73jdf1wQ85xpdI",
+  authDomain: "trainschedule-9d5b7.firebaseapp.com",
+  databaseURL: "https://trainschedule-9d5b7.firebaseio.com",
+  projectId: "trainschedule-9d5b7",
+  storageBucket: "trainschedule-9d5b7.appspot.com",
+  messagingSenderId: "478154157096"
+};
   firebase.initializeApp(config);
 
   var database = firebase.database();
@@ -118,3 +118,5 @@ database.ref().on("child_added", function(childSnapshot) {
 
   }
   setInterval(displayTime, 1000);
+
+
